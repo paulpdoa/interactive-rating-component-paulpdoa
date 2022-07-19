@@ -1,0 +1,149 @@
+:root {
+/* ### Primary */
+
+--Orange: hsl(25, 97%, 53%);
+
+/* ### Neutral */
+
+--White: hsl(0, 0%, 100%);
+--Light-Grey: hsl(217, 12%, 63%);
+--Medium-Grey: hsl(216, 12%, 54%);
+--Dark-Blue: hsl(213, 19%, 18%);
+--Very-Dark-Blue: hsl(216, 12%, 8%);
+
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+    font-family: 'Overpass', sans-serif;
+}
+body {
+    background: var(--Very-Dark-Blue);
+    user-select:none;
+}
+.container {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height: 100vh;
+}
+.card {
+    background: var(--Dark-Blue);
+    padding:2em;
+    border-radius:1em;
+    width: 30%;
+    color: var(--White);
+}
+.current__card {
+    display:block;
+}
+.thankyou__card {
+    display:none;
+    flex-direction: column;
+    align-items:center;
+    text-align:center;
+    gap:2em;
+}
+.thankyou__rate {
+    background:hsl(212, 15%, 23%);
+    padding:0.6em;
+    border-radius:2em;
+    color:var(--Orange);
+    width:13em;
+}
+.thankyou__description {
+    color:var(--Light-Grey);
+    font-weight: 500;
+    padding:1em;
+}
+.card__star {
+    background:hsl(212, 15%, 23%);
+    padding:1em;
+    border-radius:100%;
+}
+.card__title {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-top: 1em;
+}
+.card__description {
+    margin-top: 0.6em;
+    color: var(--Light-Grey);
+    font-weight: 500;
+}
+.card__ratings {
+    margin-top:2em;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.rating__number {
+    background:hsl(212, 15%, 23%);
+    height: 4em;
+    width:4em;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:100px;
+    cursor:pointer;
+    color: var(--Medium-Grey);
+    font-size: 1em;
+    font-weight: 700;
+}
+.rating__number--selected {
+    background:var(--Light-Grey);
+    color:var(--White);
+}
+.rating__number:hover {
+    background:var(--Orange);
+    color:var(--White);
+    transition: 0.2s ease-in-out;
+}
+.card__submit {
+    background:var(--Orange);
+    color:var(--White);
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.2em;
+    width:100%;
+    padding:0.5em;
+    border-radius:1em;
+    border:none;
+    margin-top:1em;
+    cursor:pointer;
+}
+.card__submit:hover {
+    background:var(--White);
+    color:var(--Orange);
+    transition: 0.2s ease-in-out;
+}
+footer {
+    position:absolute;
+    bottom:0;
+    text-align:center;
+    width:100%;
+    padding:1em;
+    color: var(--Light-Grey);
+    font-size:0.9em;
+}
+footer a {
+    color: var(--White);
+}
+
+@media only screen and (max-width: 600px) {
+    .card {
+        width: 90%;
+    }
+    .card__ratings {
+        gap:1em;
+        width:100%;
+    }
+    .rating__number {
+        height:50px;
+        width:50px;
+    }
+    .thankyou__rate {
+        width:auto;
+    }
+}
